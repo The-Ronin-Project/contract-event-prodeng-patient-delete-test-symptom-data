@@ -21,7 +21,7 @@
           "description": "The time when the test patient was deleted"
         }
       },
-      "required": ["id", "tenantId", "deletedAt"]
+      "required": ["patientId", "tenantId", "deletedAt"]
     }
   }
 }
