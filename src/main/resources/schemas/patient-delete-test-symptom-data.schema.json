@@ -1,0 +1,27 @@
+{
+  "$id": "https://github.com/projectronin/ronin-contract-event-template/blob/main/v1/contract-event-prodeng-patient-delete-test-symptom-data-v1.schema.json",
+  "title": "Patient Delete Test Symptom Data Schema",
+  "description": "Schema describing an event sent when a test patient is deleted in dev",
+  "type": "object",
+  "properties": {
+    "delete": {
+      "type": "object",
+      "properties": {
+        "patientId": {
+          "description": "The ID of the patient aka UDP ID",
+          "type": "string"
+        },
+        "tenantId": {
+          "description": "The ID of the tenant to which the patient belongs to",
+          "type": "string"
+        },
+        "deletedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "The time when the test patient was deleted"
+        }
+      },
+      "required": ["patientId", "tenantId", "deletedAt"]
+    }
+  }
+}
